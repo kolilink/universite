@@ -105,23 +105,27 @@
 
             /* 1. Marges zéro pour utiliser toute la feuille */
             @page {
-                margin: 0;
-                size: A4 portrait;
+                  margin: 6mm;
+                  size: auto;
             }
 
+
             /* 2. Reset Global */
-            body,
-            html {
-                height: 100% !important;
-                width: 100% !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                overflow: hidden !important;
-                background: white !important;
-                color: black !important;
-                -webkit-print-color-adjust: exact;
-                /* Force l'impression des couleurs de fond */
-            }
+           body,
+                html {
+                  height: auto !important;
+                  width: 100% !important;
+                  margin: 0 !important;
+                  padding: 0 !important;
+                  overflow: visible !important;
+                  background: white !important;
+                  color: black !important;
+                  -webkit-print-color-adjust: exact;
+                 /* Force l'impression des couleurs de fond */
+
+                }
+
+
 
             /* 3. Masquer l'interface inutile */
             .no-print,
@@ -149,23 +153,26 @@
             }
 
             #results-panel {
-                display: block !important;
-                position: absolute !important;
-                top: 0 !important;
-                left: 0 !important;
-                width: 100% !important;
-                height: 100% !important;
-                padding: 1.5cm !important;
-                /* Marges internes confortables */
-                background: white !important;
+              display: block !important;
+              position: static !important;
+              width: 100% !important;
+              height: auto !important;
+              padding: 0 !important;
+              margin: 0 !important;
+              background: white !important;
             }
 
             #results-content {
-                display: block !important;
-                opacity: 1 !important;
-                visibility: visible !important;
-                width: 100% !important;
+              display: block !important;
+              opacity: 1 !important;
+              visibility: visible !important;
+              width: 100% !important;
+            
+              padding: 10mm !important;
+              transform: scale(1.05);
+              transform-origin: top left;
             }
+
 
             /* 5. Optimisation verticale (Compacter pour que ça rentre sans zoomer arrière) */
             .space-y-6> :not([hidden])~ :not([hidden]) {
@@ -951,6 +958,7 @@ Vue sur 1 an
 
 
 </html>
+
 
 
 
