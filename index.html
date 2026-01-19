@@ -614,34 +614,48 @@ Vue sur 1 an
 
         // --- 3. UI BUILDER ---
         function initProductConfig() {
-            const container = document.getElementById('product-config-container');
-            container.innerHTML = '';
+  const container = document.getElementById('product-config-container');
+  container.innerHTML = '';
 
-            defaultProducts.forEach(p => {
-                const item = document.createElement('div');
-                item.className = "bg-slate-700/50 p-3 rounded-lg border border-slate-600 flex items-center gap-3 hover:border-blue-500 transition-colors";
-                item.innerHTML = `
-                    <div class="flex items-center h-full">
-                        <input type="checkbox" id="check-${p.id}" ${p.active ? 'checked' : ''} class="w-4 h-4 rounded border-gray-500 text-blue-600 focus:ring-blue-500 bg-gray-700 cursor-pointer">
-                    </div>
-                    <div class="flex-grow min-w-0">
-                        <p class="text-xs font-bold text-slate-200 truncate">${p.name}</p>
-                        <p class="text-[10px] text-slate-400">Coût: ${p.cost}</p>
-                    </div>
-                    <div class="flex gap-2">
-                        <div class="flex flex-col w-20">
-                            <label class="text-[9px] text-slate-500">Prix Vente</label>
-                            <input type="number" id="price-${p.id}" value="${p.price}" class="bg-slate-800 border border-slate-600 text-white text-xs rounded px-2 py-1 text-right focus:border-blue-500 outline-none input-watch">
-                        </div>
-                        <div class="flex flex-col w-12">
-                            <label class="text-[9px] text-slate-500">Qté</label>
-                            <input type="number" id="qty-${p.id}" value="${p.qty}" class="bg-slate-800 border border-slate-600 text-white text-xs rounded px-2 py-1 text-center focus:border-blue-500 outline-none input-watch">
-                        </div>
-                    </div>
-                `;
-                container.appendChild(item);
-            });
-        }
+  defaultProducts.forEach(p => {
+    const item = document.createElement('div');
+    item.className =
+      "bg-slate-700/50 p-3 rounded-lg border border-slate-600 flex items-center gap-3 hover:border-blue-500 transition-colors";
+
+    item.innerHTML = `
+      <div class="flex items-center h-full">
+        <input type="checkbox" id="check-${p.id}" ${p.active ? 'checked' : ''}
+          class="w-4 h-4 rounded border-gray-500 text-blue-600 focus:ring-blue-500 bg-gray-700 cursor-pointer">
+      </div>
+
+      <div class="flex-grow min-w-0">
+        <p class="text-xs font-bold text-slate-200 truncate">${p.name}</p>
+        <p class="text-[10px] text-slate-400">Coût : ${p.cost}</p>
+      </div>
+
+      <div class="flex gap-2">
+        <div class="flex flex-col w-20">
+          <label class="text-[9px] text-slate-500">Prix</label>
+          <input
+            type="number"
+            step="500"
+            min="0"
+            id="price-${p.id}"
+            value="${p.price}"
+            class="bg-slate-800 border border-slate-600 text-white text-xs rounded px-2 py-1 text-right focus:border-blue-500 outline-none input-watch">
+        </div>
+
+        <div class="flex flex-col w-12">
+          <label class="text-[9px] text-slate-500">Qté</label>
+          <input type="number" id="qty-${p.id}" value="${p.qty}"
+            class="bg-slate-800 border border-slate-600 text-white text-xs rounded px-2 py-1 text-center focus:border-blue-500 outline-none input-watch">
+        </div>
+      </div>
+    `;
+
+    container.appendChild(item);
+  });
+}
 
         // --- 4. MODE SWITCHER ---
         function switchMode(mode) {
@@ -935,6 +949,7 @@ Vue sur 1 an
 
 
 </html>
+
 
 
 
