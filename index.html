@@ -289,7 +289,7 @@ Vue sur 1 an
             class="w-full md:w-[400px] bg-slate-800 text-white flex flex-col border-r border-slate-700 z-10 no-print shadow-2xl md:h-[calc(100vh-4rem)] md:overflow-y-auto">
 
 
-            <div class="p-4 md:p-6 space-y-8 pb-32 md:pb-24">
+            <div class="p-4 md:p-6 space-y-8 pb-40 md:pb-24">
 
                 <!-- Instruction -->
                 <div class="bg-blue-900/40 border border-blue-700/50 rounded-lg p-3 text-xs text-blue-200 flex gap-2">
@@ -336,7 +336,7 @@ Vue sur 1 an
 
             <!-- BOUTON D'ACTION FLOTTANT (Sticky Bottom) -->
             <div
-                class="absolute bottom-0 left-0 w-full md:w-[400px] p-4 bg-slate-900/95 border-t border-slate-700 backdrop-blur">
+                class="fixed md:absolute bottom-0 left-0 w-full md:w-[400px] p-4 bg-slate-900/95 border-t border-slate-700 backdrop-blur z-30">
                 <button onclick="runSimulation()" id="btn-calculate"
                     class="w-full py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl shadow-lg shadow-blue-900/30 transition-all flex items-center justify-center gap-3 transform active:scale-95 btn-pulse ring-1 ring-white/10">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -951,6 +951,7 @@ Vue sur 1 an
 
 
 </html>
+
 
 
 
