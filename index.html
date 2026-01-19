@@ -241,11 +241,12 @@
     </style>
 </head>
 
-<body class="h-screen flex flex-col overflow-hidden">
+<body class="min-h-screen flex flex-col overflow-x-hidden">
 
     <!-- TOP BAR -->
-    <header
-        class="h-16 bg-slate-900 text-white flex items-center justify-between px-6 z-20 shadow-lg no-print flex-shrink-0">
+   <header
+          class="bg-slate-900 text-white flex flex-col md:flex-row md:items-center md:justify-between gap-3 px-4 py-3 md:h-16 md:py-0 z-20 shadow-lg no-print flex-shrink-0">
+
         <div class="flex items-center gap-3">
             <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-lg">K</div>
             <h1 class="font-bold text-lg tracking-wide">KOLILINK <span class="font-light text-slate-400">|
@@ -284,10 +285,11 @@ Vue sur 1 an
     <div class="flex-grow flex flex-col md:flex-row overflow-hidden relative">
 
         <!-- LEFT SIDEBAR: CONFIGURATION (Stable) -->
-        <aside
-            class="w-full md:w-[400px] bg-slate-800 text-white flex flex-col border-r border-slate-700 z-10 overflow-y-auto no-print shadow-2xl">
+    <aside 
+            class="w-full md:w-[400px] bg-slate-800 text-white flex flex-col border-r border-slate-700 z-10 no-print shadow-2xl md:h-[calc(100vh-4rem)] md:overflow-y-auto">
 
-            <div class="p-6 space-y-8 pb-24">
+
+            <div class="p-4 md:p-6 space-y-8 pb-32 md:pb-24">
 
                 <!-- Instruction -->
                 <div class="bg-blue-900/40 border border-blue-700/50 rounded-lg p-3 text-xs text-blue-200 flex gap-2">
@@ -350,7 +352,7 @@ Vue sur 1 an
         </aside>
 
         <!-- RIGHT MAIN: VISUALIZATION -->
-        <main class="flex-grow bg-slate-50 relative overflow-y-auto p-4 md:p-8" id="results-panel">
+    <main class="flex-grow bg-slate-50 relative overflow-y-auto p-3 sm:p-4 md:p-8 max-w-full" id="results-panel">
 
             <!-- Loading Overlay -->
             <div id="loading-screen"
@@ -633,7 +635,7 @@ Vue sur 1 an
         <p class="text-[10px] text-slate-400">Coût : ${p.cost}</p>
       </div>
 
-      <div class="flex gap-2">
+    <div class="grid grid-cols-2 gap-2 sm:flex sm:gap-2">
         <div class="flex flex-col w-20">
           <label class="text-[9px] text-slate-500">Prix</label>
           <input
@@ -949,6 +951,7 @@ Vue sur 1 an
 
 
 </html>
+
 
 
 
