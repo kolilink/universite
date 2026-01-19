@@ -256,11 +256,11 @@
         <div class="bg-slate-800 p-1 rounded-lg flex items-center gap-1">
             <button onclick="switchMode('1an')" id="btn-mode-1an"
                 class="px-4 py-1.5 rounded-md text-sm font-medium transition-all bg-blue-600 text-white shadow">
-                Vue Urgence (1 An)
+Vue sur 1 an
             </button>
             <button onclick="switchMode('5ans')" id="btn-mode-5ans"
                 class="px-4 py-1.5 rounded-md text-sm font-medium transition-all text-slate-400 hover:text-white">
-                Vue Vision (5 Ans)
+                Vue sur 5 ans
             </button>
         </div>
 
@@ -295,8 +295,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    <p>Saisissez vos informations ci-dessous. Les résultats ne s'afficheront que lorsque vous cliquerez
-                        sur "Lancer la Simulation".</p>
+                    <p>Entrez vos informations ci-dessous puis cliquez sur "Lancer la simulation".</p>
                 </div>
 
                 <!-- 1. IDENTIFICATION -->
@@ -322,7 +321,7 @@
                 <div>
                     <div class="flex justify-between items-end mb-4">
                         <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> 2.Produits
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> 2. Produits
                         </h2>
                     </div>
 
@@ -373,7 +372,7 @@
                 </div>
                 <div>
                     <h3 class="text-xl font-bold text-slate-700">En attente de simulation</h3>
-                    <p class="text-slate-500 max-w-sm mx-auto mt-2 text-sm">Pour visualiser l'impact veuillez entrer les informations de l'établissement à gauche, puis cliquez sur le bouton <strong>"LANCER LA SIMULATION"</strong>
+                    <p class="text-slate-500 max-w-sm mx-auto mt-2 text-sm">Pour voir l’impact, entrez les informations de votre établissement à gauche, puis cliquez sur <strong>"LANCER LA SIMULATION"</strong>
                         </p>
                 </div>            </div>
 
@@ -417,8 +416,8 @@
                                         id="total-1an">0</div>
                                     <span class="text-2xl font-medium text-slate-400">GNF</span>
                                 </div>
-                                <p class="text-sm text-emerald-600 font-medium mt-2 print:text-emerald-400">Fonds
-                                    d'urgence générés immédiatement</p>
+                                <p class="text-sm text-emerald-600 font-medium mt-2 print:text-emerald-400">Fonds d’urgence disponibles
+</p>
                             </div>
                             <!-- Donut Chart -->
                             <div class="w-32 h-32 relative">
@@ -433,7 +432,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
-                        Plan d'Urgence (Suggestion d'Allocation)
+                       Plan d’urgence
                     </h3>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -452,9 +451,9 @@
                                 <span class="text-xs font-bold bg-slate-100 text-slate-500 px-2 py-1 rounded">40%</span>
                             </div>
                             <h4 class="font-bold text-slate-800">Ventilation</h4>
-                            <p class="text-xs text-slate-400 mb-3">Confort des Amphithéâtres</p>
+                            <p class="text-xs text-slate-400 mb-3">Confort des salles</p>
                             <div class="text-2xl font-bold text-blue-600 mb-2" id="val-fans">0</div>
-                            <p class="text-xs text-slate-400">Budget alloué</p>
+                            <p class="text-xs text-slate-400">Budget</p>
                         </div>
 
                         <!-- Card 2 -->
@@ -472,9 +471,9 @@
                                 <span class="text-xs font-bold bg-slate-100 text-slate-500 px-2 py-1 rounded">40%</span>
                             </div>
                             <h4 class="font-bold text-slate-800">Sanitaires</h4>
-                            <p class="text-xs text-slate-400 mb-3">Réhabilitation Toilettes</p>
+                            <p class="text-xs text-slate-400 mb-3">Réparer les Toilettes</p>
                             <div class="text-lg font-bold text-orange-600 mb-2" id="val-toilets">0 GNF</div>
-                            <p class="text-xs text-slate-400">Budget travaux</p>
+                            <p class="text-xs text-slate-400">Budget</p>
                         </div>
 
                         <!-- Card 3 -->
@@ -494,7 +493,7 @@
                             <h4 class="font-bold text-slate-800">Santé</h4>
                             <p class="text-xs text-slate-400 mb-3">Kits Urgence Infirmerie</p>
                             <div class="text-lg font-bold text-red-600 mb-2" id="val-health">0 GNF</div>
-                            <p class="text-xs text-slate-400">Budget dotation</p>
+                            <p class="text-xs text-slate-400">Budget</p>
                         </div>
                     </div>
                 </div>
@@ -939,6 +938,7 @@
 
 
 </html>
+
 
 
 
